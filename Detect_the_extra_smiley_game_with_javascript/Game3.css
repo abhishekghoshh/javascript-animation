@@ -1,0 +1,15 @@
+#leftside{
+    background-color: blue;
+    min-height: 100px;
+    height: 90vh;
+    position: relative;
+}
+#rightside{
+    background-color: yellow;
+    min-height: 100px;
+    height: 90vh;
+    position: relative;
+}
+img{
+    position: absolute;
+}

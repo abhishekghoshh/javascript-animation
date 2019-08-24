@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face matching game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Game3.js"></script>
+    <link rel="stylesheet" href="Game3.css">
+</head>
+
+<body>
+    <br>
+    <div class="text-center well container"><h1>Detect the extra smiley</h1></div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" id="leftside"></div>
+            <div class="col-sm-6" id="rightside"></div>
+        </div>
+        
+    </div><br>
+    <div class="well container">
+        <div class="row">
+            <div class="text-center col-xs-6"><button class="btn-danger" onclick="create5()">Start your Game</button></div>
+            <div class="text-center col-xs-6"><button class="btn-danger" onclick="removeAll()">Reset your Game</button></div>
+        </div>
+        <div class="text-center col-xs-12"><h1 id="info"></h1></div>
+    </div>
+    
+</body>
+</html>
