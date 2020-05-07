@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #FF0000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Round Range Slider</h1>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="255" value="127" class="slider" id="red">
+  </br>
+  <input type="range" min="0" max="255" value="127" class="slider" id="green"></br>
+  <input type="range" min="0" max="255" value="127" class="slider" id="blue">
+  </br>
+  <p>Value: <span id="demo"></span></p>
+  <div id ="colorBox" style="height:100px;width:100px; background: #7f7f7f;"></div>
+</div>
+
+<script>
+var slider1 = document.getElementById("red");
+var slider2 = document.getElementById("green");
+var slider3= document.getElementById("blue");
+var output = document.getElementById("demo");
+output.innerHTML = rgb2hex(parseInt(slider1.value),parseInt(slider2.value),parseInt(slider3.value));
+
+function rgb2hex(r,g,b) {
+    if (g !== undefined)
+        return Number(0x1000000 + r*0x10000 + g*0x100 + b).toString(16).substring(1);
+    else
+        return Number(0x1000000 + r[0]*0x10000 + r[1]*0x100 + r[2]).toString(16).substring(1);
+}
+slider1.oninput=function() {
+  output.innerHTML = rgb2hex(parseInt(slider1.value),parseInt(slider2.value),parseInt(slider3.value)); document.getElementById("colorBox").style.backgroundColor="#"+output.innerHTML;
+}
+slider2.oninput=function() {
+  output.innerHTML =rgb2hex(parseInt(slider1.value),parseInt(slider2.value),parseInt(slider3.value)); document.getElementById("colorBox").style.backgroundColor="#"+output.innerHTML;
+}
+slider3.oninput=function() {
+  output.innerHTML = rgb2hex(parseInt(slider1.value),parseInt(slider2.value),parseInt(slider3.value));
+document.getElementById("colorBox").style.backgroundColor="#"+output.innerHTML;
+}
+</script>
+
+</body>
+</html>

@@ -1,4 +1,7 @@
-var len=300;
+$(function(){
+
+    
+var len=50;
 var mainDiv=document.getElementById("container");
 var div_height = mainDiv.offsetHeight;
 var div_width = mainDiv.offsetWidth;
@@ -18,8 +21,7 @@ for(i=0;i<len;i++)
 }
 
 var innerDiv=mainDiv.querySelectorAll("div");
-function rndm()
-{
+$("#rndm").click(function(){
     for(i=0;i<len;i++)
     {
         myArray[i]=div_height*i/len;
@@ -40,11 +42,10 @@ function rndm()
         innerDiv[i].style.top=innerDivTop+"px";
         innerDiv[i].style.left=innerDivLeft[i]+"px";
         innerDiv[i].style.height=innerDivHeight[i]+"px";
-    }   
-}
+    } 
+});
 
-function srt()
-{
+$("#srt").click(function(){
     var newInnerdiv=mainDiv.querySelectorAll("div");
     for(i=0;i<len-1;i++)
     {
@@ -70,7 +71,21 @@ function srt()
                 newInnerdiv[j+1].style.backgroundColor = "blue";
                 
             }
+            sleep(1000);
+            console.log(`iteration for ${i} ${j}`)
         }
+        
+    //    console.log(`Iteration for ${i}`); 
     }
-}
+    });
+    function sleep(milliseconds) { 
+        let timeStart = new Date().getTime(); 
+        while (true) { 
+            let elapsedTime = new Date().getTime() - timeStart; 
+            if (elapsedTime > milliseconds) { 
+                break; 
+            } 
+        } 
+    } 
+});
 
