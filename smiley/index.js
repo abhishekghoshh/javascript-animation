@@ -4,8 +4,7 @@ var level =0;
 var failed_no =0;
 
 function create5(){
-    for(var i=1;i<=5;i++)
-    {
+    for(var i=1;i<=5;i++){
         var img = document.createElement("IMG");
         img.setAttribute("src","smiley_face.gif");
         img.setAttribute("width", "60");
