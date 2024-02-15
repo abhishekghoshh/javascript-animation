@@ -34,7 +34,7 @@ function intervalManager(animate, time) {
     if(intervalID)
         clearInterval(intervalID);      
     intervalID =  setInterval(animate, time);
- }
+}
 
 function move() {
     if (hit_top == 0) {
