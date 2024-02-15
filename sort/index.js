@@ -1,6 +1,4 @@
 $(function() {
-
-
     var len = 50;
     var mainDiv = document.getElementById("container");
     var div_height = mainDiv.offsetHeight;
@@ -10,7 +8,7 @@ $(function() {
     var innerDivHeight = new Array(len);
     var innerDivLeft = new Array(len);
     var myArray = new Array(len);
-    var i, j, k;
+    var i, j;
     for (i = 0; i < len; i++) {
         var myDiv = document.createElement("div");
         myDiv.style.position = "absolute";
@@ -64,21 +62,24 @@ $(function() {
                     newInnerdiv[j + 1].style.backgroundColor = "blue";
 
                 }
-                sleep(1000);
                 console.log(`iteration for ${i} ${j}`)
             }
-
-            //    console.log(`Iteration for ${i}`); 
         }
     });
-
-    function sleep(milliseconds) {
-        let timeStart = new Date().getTime();
-        while (true) {
-            let elapsedTime = new Date().getTime() - timeStart;
-            if (elapsedTime > milliseconds) {
-                break;
-            }
-        }
-    }
 });
+
+let randomize = function(){
+
+};
+
+let bubbleSort = function(){
+
+};
+
+let insertionSort = function(){
+
+};
+
+let mergeSort = function(){
+
+};
