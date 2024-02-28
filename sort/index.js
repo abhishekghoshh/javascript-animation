@@ -108,6 +108,7 @@ function randomize() {
     for (i = 0; i < BAR_COUNT; i++) {
         myArray[i] = height * i / BAR_COUNT;
     }
+    // to remove the biasness we will do the randomize function 10 times
     for (let j = 0; j < 10; j++) {
         for (i = 0; i < BAR_COUNT; i++) {
             var x = Math.floor(Math.random() * BAR_COUNT)
